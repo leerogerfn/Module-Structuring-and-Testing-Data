@@ -27,7 +27,7 @@ return "reflex angle";
   return "right angle";
 } else if (angle < 90 && angle > 0) {
   return "acute angle";
-} 
+} return "invalid angle";
 }
 
 
