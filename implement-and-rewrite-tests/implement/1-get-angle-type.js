@@ -18,17 +18,17 @@
 
 function getAngleType(angle) {
   if (angle > 180 && angle < 360) {
-return "reflex angle";
-} else if (angle === 180) {
-  return "straight angle";
-} else if (angle < 180 && angle > 90) {
-  return "obtuse angle";
-} else if (angle === 90) {
-  return "right angle";
-} else if (angle < 90 && angle > 0) {
-  return "acute angle";
-} return "invalid angle";
+    return "reflex angle";
+  } else if (angle === 180) {
+    return "straight angle";
+  } else if (angle < 180 && angle > 90) {
+    return "obtuse angle";
+  } else if (angle === 90) {
+    return "right angle";
+  } else if (angle < 90 && angle > 0) {
+    return "acute angle";
+  }
+  return "invalid angle";
 }
 
-
-export{getAngleType}
+export { getAngleType };

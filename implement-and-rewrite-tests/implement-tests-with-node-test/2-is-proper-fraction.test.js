@@ -1,7 +1,7 @@
+import { isProperFraction } from "../implement/2-is-proper-fraction.js";
 import assert from "node:assert";
 import test from "node:test";
 
-import { isProperFraction } from "../implement/2-is-proper-fraction.js";
 
 // TODO: Write tests to cover all cases.
 // What combinations of numerators and denominators should you test?
@@ -9,4 +9,8 @@ import { isProperFraction } from "../implement/2-is-proper-fraction.js";
 test("Basic proper fraction", () => {
   // Example: 1/2 is a proper fraction
   assert.equal(isProperFraction(1, 2), true);
+});
+
+test("Basic proper fraction", () => {
+  assert.equal(isProperFraction(3, 2), false);
 });
