@@ -22,8 +22,10 @@ return "reflex angle";
 } else if (angle === 180) {
   return "straight angle";
 } else if (angle < 180 && angle > 90) {
-  return "obtuse angle"
-}
+  return "obtuse angle";
+} else if (angle === 90) {
+  return "right angle";
+} 
 }
 
 
