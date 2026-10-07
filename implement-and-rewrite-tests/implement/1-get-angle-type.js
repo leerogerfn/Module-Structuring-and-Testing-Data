@@ -16,6 +16,11 @@
 // After you have implemented the function, write tests to cover all the cases, and
 // execute the code to ensure all tests pass.
 
-export function getAngleType(angle) {
-  // TODO: Implement this function
+function getAngleType(angle) {
+  if (angle >180 && angle < 360){
+return "reflex angle";
+} 
 }
+} 
+
+export{getAngleType}
