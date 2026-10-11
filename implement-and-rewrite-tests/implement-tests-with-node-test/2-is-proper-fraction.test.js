@@ -2,7 +2,6 @@ import { isProperFraction } from "../implement/2-is-proper-fraction.js";
 import assert from "node:assert";
 import test from "node:test";
 
-
 // TODO: Write tests to cover all cases.
 // What combinations of numerators and denominators should you test?
 

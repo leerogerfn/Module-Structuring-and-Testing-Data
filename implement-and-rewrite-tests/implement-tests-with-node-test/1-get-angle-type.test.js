@@ -1,4 +1,4 @@
-import {getAngleType} from '../implement/1-get-angle-type.js';
+import { getAngleType } from "../implement/1-get-angle-type.js";
 import assert from "node:assert";
 import test from "node:test";
 
@@ -29,4 +29,3 @@ test("Classifies boundary and invalid angles", () => {
   assert.equal(getAngleType(365), "Invalid angle");
   assert.equal(getAngleType(-10), "Invalid angle");
 });
-
