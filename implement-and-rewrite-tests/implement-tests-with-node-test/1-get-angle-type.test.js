@@ -6,27 +6,27 @@ import test from "node:test";
 // Example: Identify Right Angles
 
 test("Classifies acute angle", () => {
-  assert.equal(getAngleType(45), "acute angle");
+  assert.equal(getAngleType(45), "Acute angle");
 });
 
 test("Classifies right angle", () => {
-  assert.equal(getAngleType(90), "right angle");
+  assert.equal(getAngleType(90), "Right angle");
 });
 
 test("Classifies obtuse angle", () => {
-  assert.equal(getAngleType(120), "obtuse angle");
+  assert.equal(getAngleType(120), "Obtuse angle");
 });
 
 test("Classifies straight angle", () => {
-  assert.equal(getAngleType(180), "straight angle");
+  assert.equal(getAngleType(180), "Straight angle");
 });
 
 test("Classifies reflex angle", () => {
-  assert.equal(getAngleType(200), "reflex angle");
+  assert.equal(getAngleType(200), "Reflex angle");
 });
 
 test("Classifies boundary and invalid angles", () => {
-  assert.equal(getAngleType(365), "invalid angle");
-  assert.equal(getAngleType(-10), "invalid angle");
+  assert.equal(getAngleType(365), "Invalid angle");
+  assert.equal(getAngleType(-10), "Invalid angle");
 });
 

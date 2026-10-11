@@ -52,8 +52,8 @@ export function getCardValue(card) {
   ].includes(rank);
   const validSuit = ["♠", "♥", "♦", "♣"].includes(suit);
 
-  if (!validRank || !validSuit) {
-    throw new Error (`Expected a number followed by a suit, but got "${card}"`);
+  if (!validRank || !validSuit || card.length > 3 || card.length < 2) {
+    throw new Error (`Expected a number followed by a suit, but got "invalid"`);
   }
 
   if (rank === "A") {
