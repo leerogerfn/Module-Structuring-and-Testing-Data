@@ -12,8 +12,3 @@ export function getOrdinalNumber(num) {
 } return `${num}th`
 }
 
-console.log(getOrdinalNumber(1));
-console.log(getOrdinalNumber(2));
-console.log(getOrdinalNumber(3));
-console.log(getOrdinalNumber(12));
-console.log(getOrdinalNumber(26));
