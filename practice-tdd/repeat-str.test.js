@@ -21,12 +21,33 @@ test("should repeat the string count times", () => {
 // When the repeatStr function is called with these inputs,
 // Then it should return the original `str` without repetition.
 
+test("should repeat the string count times", () => {
+  const str = "hello";
+  const count = 1;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("hello");
+});
+
 // Case: Handle count of 0:
 // Given a target string `str` and a `count` equal to 0,
 // When the repeatStr function is called with these inputs,
 // Then it should return an empty string.
 
+test("should repeat the string count times", () => {
+  const str = "hello";
+  const count = 0;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("");
+});
+
 // Case: Handle negative count:
 // Given a target string `str` and a negative integer `count`,
 // When the repeatStr function is called with these inputs,
 // Then it should throw an error, as negative counts are not valid.
+
+test("should repeat the string count times", () => {
+  const str = "hello";
+  const count = -2;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toThrow("Count could not be negative");
+});
