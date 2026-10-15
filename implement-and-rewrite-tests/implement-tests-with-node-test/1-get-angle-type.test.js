@@ -26,6 +26,11 @@ test("Classifies reflex angle", () => {
 });
 
 test("Classifies boundary and invalid angles", () => {
-  assert.equal(getAngleType(365), "Invalid angle");
-  assert.equal(getAngleType(-10), "Invalid angle");
+  assert.equal(getAngleType(365), "invalid angle");
+  assert.equal(getAngleType(-10), "invalid angle");
+  assert.equal(getAngleType(0), "invalid angle");
+  assert.equal(getAngleType(""), "invalid angle");
+  assert.equal(getAngleType("angle"), "invalid angle");
+  assert.equal(getAngleType("null"), "invalid angle")
+
 });
