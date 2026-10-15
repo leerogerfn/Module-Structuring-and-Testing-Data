@@ -14,8 +14,7 @@
 // execute the code to ensure all tests pass.
 
 export function isProperFraction(numerator, denominator) {
-  if (numerator < denominator) {
-    return "true";
-  }
-  return "false";
+  return numerator > 0 && denominator > 0 && numerator < denominator;
 }
+
+console.log(isProperFraction(2, 6));
