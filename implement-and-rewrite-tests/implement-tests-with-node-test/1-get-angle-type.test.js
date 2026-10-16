@@ -31,6 +31,11 @@ test("Classifies boundary and invalid angles", () => {
   assert.equal(getAngleType(0), "invalid angle");
   assert.equal(getAngleType(""), "invalid angle");
   assert.equal(getAngleType("angle"), "invalid angle");
-  assert.equal(getAngleType("null"), "invalid angle")
-
+  assert.equal(getAngleType("null"), "invalid angle");
+  assert.equal(getAngleType(360), "invalid angle");
+  assert.equal(getAngleType(181), "Reflex angle");
+  assert.equal(getAngleType(91), "Obtuse angle");
+  assert.equal(getAngleType(179), "Obtuse angle");
+  assert.equal(getAngleType(89), "Acute angle");
+  assert.equal(getAngleType(1), "Acute angle");
 });
