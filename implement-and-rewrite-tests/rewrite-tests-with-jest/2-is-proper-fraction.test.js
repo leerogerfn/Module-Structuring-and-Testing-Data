@@ -15,6 +15,10 @@ test(`should return false when denominator is less than numerator`, () => {
   expect(isProperFraction(4, 1)).toEqual(false);
 });
 
-test(`should true when denominator and numerator are negative`, () => {
+test(`should return false when denominator and numerator are negative`, () => {
   expect(isProperFraction(-5, -2)).toEqual(false);
+});
+
+test(`should return false when denominator and numerator are equal`, () => {
+  expect(isProperFraction(1, 1)).toEqual(false);
 });
