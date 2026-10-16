@@ -20,8 +20,32 @@ test(`Should return 10 when given J/Q/K`, () => {
 });
 //   Invalid Cards
 test(`Expected a number followed by a suit, but got invalid`, () => {
-  expect(() => getCardValue("invalid")).toThrow(
-    `Expected a number followed by a suit, but got "invalid"`
+  expect(() => getCardValue("10")).toThrow(
+    `Expected a number or face followed by a suit, but got "invalid"`
+  );
+});
+
+test(`Expected a number followed by a suit, but got invalid`, () => {
+  expect(() => getCardValue("")).toThrow(
+    `Expected a number or face followed by a suit, but got "invalid"`
+  );
+});
+
+test(`Expected a number followed by a suit, but got invalid`, () => {
+  expect(() => getCardValue("♥")).toThrow(
+    `Expected a number or face followed by a suit, but got "invalid"`
+  );
+});
+
+test(`Expected a number followed by a suit, but got invalid`, () => {
+  expect(() => getCardValue("♥10")).toThrow(
+    `Expected a number or face followed by a suit, but got "invalid"`
+  );
+});
+
+test(`Valid rank: 2-10, A, J, Q, K only`, () => {
+  expect(() => getCardValue("12♥")).toThrow(
+    `Valid rank: 2-10, A, J, Q, K only`
   );
 });
 

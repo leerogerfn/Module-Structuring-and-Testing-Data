@@ -18,8 +18,31 @@ test("Valid ace card", () => {
 
 test("Arbitrary non-card string", () => {
   assert.throws(
-    () => getCardValue("invalid"),
-    /Expected a number followed by a suit, but got "invalid"/,
+    () => getCardValue("10"),
+    /Expected a number or face followed by a suit, but got "invalid"/,
+    "Expected clear error"
+  );
+  assert.throws(
+    () => getCardValue("♥"),
+    /Expected a number or face followed by a suit, but got "invalid"/,
+    "Expected clear error"
+  );
+  assert.throws(
+    () => getCardValue(""),
+    /Expected a number or face followed by a suit, but got "invalid"/,
+    "Expected clear error"
+  );
+  assert.throws(
+    () => getCardValue("♥10"),
+    /Expected a number or face followed by a suit, but got "invalid"/,
+    "Expected clear error"
+  );
+});
+
+test("Invalid Rank", () => {
+  assert.throws(
+    () => getCardValue("12♥"),
+    /Valid rank: 2-10, A, J, Q, K only/,
     "Expected clear error"
   );
 });

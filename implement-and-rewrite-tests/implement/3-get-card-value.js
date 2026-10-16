@@ -51,9 +51,16 @@ export function getCardValue(card) {
     "K",
   ].includes(rank);
   const validSuit = ["♠", "♥", "♦", "♣"].includes(suit);
+  const validCard = validRank + validSuit;
 
-  if (!validRank || !validSuit || card.length > 3 || card.length < 2) {
-    throw new Error(`Expected a number followed by a suit, but got "invalid"`);
+  if (!validCard || !validSuit || card.length > 3 || card.length < 2) {
+    throw new Error(
+      `Expected a number or face followed by a suit, but got "invalid"`
+    );
+  }
+
+  if (!validRank) {
+    throw new Error(`Valid rank: 2-10, A, J, Q, K only.`);
   }
 
   if (rank === "A") {
