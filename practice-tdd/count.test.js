@@ -30,3 +30,10 @@ test("should count multiple occurrences of a character", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+
+test("should count multiple occurrences of a character which char only exist in some part of str", () => {
+  const str = "codeyourfuture";
+  const char = "u";
+  const count = countChar(str, char);
+  expect(count).toEqual(3);
+});
