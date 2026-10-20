@@ -50,3 +50,10 @@ test("should throw new error 'count could not be negative' when number of count 
   const count = -2; () =>
   expect(repeatStr).toThrow("count could not be negative");
 });
+
+test("should repeat the string count times", () => {
+  const str = "goodbye";
+  const count = 5;
+  const repeatedStr = repeatStr(str, count);
+  expect(repeatedStr).toEqual("goodbyegoodbyegoodbyegoodbyegoodbye");
+});
