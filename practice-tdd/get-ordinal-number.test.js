@@ -47,4 +47,4 @@ test("should append 'th' for numbers 111/112/113", () => {
   expect(getOrdinalNumber(111)).toEqual("111th");
   expect(getOrdinalNumber(112)).toEqual("112th");
   expect(getOrdinalNumber(113)).toEqual("113th");
-});
+}); 
