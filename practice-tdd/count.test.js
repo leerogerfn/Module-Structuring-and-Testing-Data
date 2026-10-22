@@ -38,8 +38,8 @@ test("should count multiple occurrences of a character which char only exist in 
   expect(count).toEqual(3);
 });
 
-test("should count no occurrences of a character which str with different char", () => {
-  const str = "codeyourfuture";
+test("should count no occurrences of no submission for str", () => {
+  const str = "";
   const char = "q";
   const count = countChar(str, char);
   expect(count).toEqual(0);
